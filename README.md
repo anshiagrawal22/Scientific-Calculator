@@ -20,6 +20,6 @@ Calculator: Use the buttons to perform calculations. Switch between normal and s
 History: Click the history button to view past calculations. You can clear the history if needed. 📜🗑️
 Theme: Change between light and dark modes using the theme toggle button. 🌞🌙
 
-https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXpleHNtNnV1ajF0bzh1ZTNhcXZjN200czYxaXl4MjUzcm00cjR5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DBV3W4egRgpLVTrdzn/giphy.gif
+![calculator](https://github.com/user-attachments/assets/6b5c73a9-b59d-4e90-a12f-f467b89414bd)
 
 ### Thankyou for your time on our Repository✨
