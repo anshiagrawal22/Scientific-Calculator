@@ -13,9 +13,15 @@ Light and Dark Modes: Toggle between light and dark themes for better user exper
 History Option: View and manage previous calculations. 📜
 Responsive Design: Works seamlessly on different screen sizes. 📱💻
 
-##Usage 🖱️
+## Usage 🖱️
 
 Home Page: Enter your name and select your preferred settings (e.g., light/dark mode). 🏠
 Calculator: Use the buttons to perform calculations. Switch between normal and scientific modes using the toggle button. �➡️🧮
 History: Click the history button to view past calculations. You can clear the history if needed. 📜🗑️
 Theme: Change between light and dark modes using the theme toggle button. 🌞🌙
+
+## Demo 🎥
+
+![Calculator Demo](https://your-gif-link-here.gif)
+
+### Thankyou for your time on our Repository✨
