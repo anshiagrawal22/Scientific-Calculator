@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://wallpaperaccess.com/full/237678.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.85); /* More transparent */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+            font-weight: 700; /* Bold */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:focus {
+            border-color: #FF4500;
+            outline: none;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px;
+            width: 48%;
+            border: none;
+            background: #FF6347;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Space between text and emoji */
+        }
+
+        button:hover {
+            background: #FF4500;
+        }
+
+        #feedbackButton {
+            background: #4CAF50;
+        }
+
+        #feedbackButton:hover {
+            background: #45a049;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm" onsubmit="validateForm(event)">
+            <h1>Welcome!!! ✨ to the Calculation World</h1>
+            <p>Please provide your details to proceed.</p>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sapid">SapID:</label>
+                <input type="text" id="sapid" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" id="calculatorButton">🧮 Go to GUI Calculator</button>
+                <button type="button" id="feedbackButton">📝 Give Feedback</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const sapid = document.getElementById('sapid').value;
+            alert(`Welcome, ${name}! Your SapID is ${sapid}. Redirecting to the GUI Calculator...`);
+            // Redirect to the GUI Calculator page here
+        }
+
+        document.getElementById('feedbackButton').addEventListener('click', function() {
+            alert("Redirecting to the Feedback Form...");
+            // Redirect to the Feedback Form page here
+        });
+    </script>
+</body>
+</html>
