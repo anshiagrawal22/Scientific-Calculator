@@ -101,7 +101,7 @@
             justify-content: center;
             gap: 8px; /* Space between text and emoji */
         }
-
+        
         button:hover {
             background: #FF4500;
         }
@@ -133,7 +133,7 @@
             </div>
 
             <div class="button-container">
-                <button type="submit" id="calculatorButton" >🔢 Go to Calculator</button>
+                <button type="submit" id="calculatorButton" ><a href="D:\GIT_&GITHUB\Scientific-Calculator\Scienfic_Calculator_Code\index.html" style="color:white">🔢 Go to Calculator</a></button>
                 <button type="button" id="feedbackButton">📝 Give Feedback</button>
             </div>
         </form>
@@ -144,10 +144,7 @@
             event.preventDefault();
             const name = document.getElementById('name').value;
             const sapid = document.getElementById('sapid').value;
-            alert(`Welcome, ${name}! Your SapID is ${sapid}. Redirecting to the GUI Calculator...`);
-            // Redirect to the GUI Calculator page here
-            // Redirecting to the calculator page
-        window.location.href = 'https://github.com/anshiagrawal22/Scientific-Calculator/blob/main/Scienfic_Calculator_Code/index.html'; 
+            alert(`Welcome, ${name}! Your SapID is ${sapid}. Redirecting to the GUI Calculator...`);           
         }
 
         document.getElementById('feedbackButton').addEventListener('click', function() {
