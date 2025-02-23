@@ -19,7 +19,6 @@ body {
     gap: 40px;
 }
 
-
 .sidebar {
     color: white;
 }
@@ -46,7 +45,7 @@ h1 {
 }
 
 .blue-button:hover {
-    background-color: #2563eb; 
+    background-color: orange; 
 }
 
 
