@@ -21,9 +21,9 @@ This project was developed through <b>shared responsibilities</b>, ensuring smoo
 - Agile Development (Kanban & XP Methodologies)
 
 ## Team Members👥
-Anshi Agrawal 
-Vansh Thakral 
-Vansh Bhatt
+- Anshi Agrawal 
+- Vansh Thakral 
+- Vansh Bhatt
 
 ## 🖥️ Preview  
 ![Calculator UI](https://github.com/user-attachments/assets/6b5c73a9-b59d-4e90-a12f-f467b89414bd) 
