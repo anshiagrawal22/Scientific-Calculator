@@ -1,40 +1,29 @@
+# GUI-Based Scientific Calculator 🔢
+This <b>GUI-based scientific calculator</b> is designed to provide a seamless and intuitive user experience. It supports <b>basic arithmetic operations</b> as well as <b>advanced scientific calculations</b>, along with additional features such as <b>calculation history tracking.</b>The project follows <b>Kanban and XP methodologies</b> to promote <b>iterative development, collaboration, continuous improvement, and the effective implementation of user feedback</b>, ensuring a user-centric and optimized experience. 🚀
 
-
-# **GUI-Based Scientific Calculator**  
-
-## **📌 Overview**  
-This project is a **GUI-based scientific calculator** designed for an intuitive and seamless user experience. It offers both **basic arithmetic** and **advanced scientific calculations**, along with additional features such as **theme customization**, **calculation history**, and a **user data collection interface**. The application is built with a responsive design to ensure optimal usability across different devices.  
-
-## **🚀 Features**  
-
+## 🚀 Features  
 - **🏠 Home Page:** Collects user details, including name and SAP ID.  
 - **🧮 Scientific Calculator:** Supports advanced mathematical functions such as trigonometry, logarithms, and exponentiation.  
 - **➕ Basic Calculator:** Handles fundamental arithmetic operations (addition, subtraction, multiplication, and division).  
-- **🔄 Mode Switching:** Easily toggle between basic and scientific calculator modes.  
-- **🌞 Theme Customization:** Switch between light and dark modes for a personalized experience.  
+- **🔄 Mode Switching:** Easily toggle between basic and scientific calculator modes.    
 - **📜 History Management:** Keep track of previous calculations with an option to clear history.  
 - **📱 Responsive Design:** Optimized for various screen sizes, ensuring a seamless user experience on both mobile and desktop devices.  
 
-## **📖 Usage**  
+## 📖 Usage  
+- <b>Home Page:</b> Enter your details to get started. 
+- <b>Calculator Interface:</b>Perform calculations effortlessly and switch between basic and scientific modes as needed.
+- <b>History Section:</b>Access and manage past calculations with an option to clear history when required.  
 
-1. **Home Page:** Enter your name and select preferred settings (e.g., light or dark mode).  
-2. **Calculator:** Use the interactive interface to perform calculations and switch between normal and scientific modes as needed.  
-3. **History:** Access past calculations and clear them when necessary.  
-4. **Theme Selection:** Toggle between light and dark modes for an enhanced visual experience.  
+## Team Project🌟🤝
+This project was developed through <b>shared responsibilities</b>, ensuring smooth teamwork and effective implementation. Each member contributed to:
+- UI/UX Design (HTML & CSS)
+- Functionality Development (JavaScript)
+- Agile Development (Kanban & XP Methodologies)
 
-## **🖥️ Preview**  
-![Calculator UI](https://github.com/user-attachments/assets/6b5c73a9-b59d-4e90-a12f-f467b89414bd)  
+## Team Members👥
+Anshi Agrawal 
+Vansh Thakral 
+Vansh Bhatt
 
----  
-
-### **📌 Contributing**  
-Contributions are welcome! If you’d like to enhance the functionality or improve the UI, feel free to submit a pull request.  
-
-### **📩 Feedback & Support**  
-For any issues or feature requests, please create an issue in the repository. Your feedback is greatly appreciated!  
-
-**⭐ If you find this project useful, consider giving it a star!**  
-
-
-
-
+## 🖥️ Preview  
+![Calculator UI](https://github.com/user-attachments/assets/6b5c73a9-b59d-4e90-a12f-f467b89414bd) 
