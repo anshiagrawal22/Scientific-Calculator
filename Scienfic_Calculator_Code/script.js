@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         display.textContent = currentInput || "0";
     }
 
+    function limitDecimals(value) {
+        return parseFloat(value).toFixed(6).replace(/\.?0+$/, ""); // Removes trailing zeros
+    }
+
     document.querySelectorAll("button").forEach(button => {
         button.addEventListener("click", () => {
             const value = button.textContent;
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (value === "+/-") {
                 currentInput = currentInput.startsWith("-") ? currentInput.slice(1) : "-" + currentInput;
             } else if (value === "%") {
-                currentInput = (parseFloat(currentInput) / 100).toString();
+                currentInput = limitDecimals(parseFloat(currentInput) / 100);
             } else if (value === "÷") {
                 currentInput += "/";
             } else if (value === "x") {
@@ -29,63 +33,68 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentInput += "+";
             } else if (value === "=") {
                 try {
-                    currentInput = eval(currentInput).toString();
+                    currentInput = limitDecimals(eval(currentInput));
                 } catch (e) {
                     currentInput = "Error";
                 }
             } else if (value === "π") {
-                currentInput += Math.PI;
+                currentInput = limitDecimals(Math.PI);
             } else if (value === "e") {
-                currentInput += Math.E;
+                currentInput = limitDecimals(Math.E);
             } else if (value === "x²") {
-                currentInput = Math.pow(parseFloat(currentInput), 2).toString();
+                currentInput = limitDecimals(Math.pow(parseFloat(currentInput || "0"), 2));
             } else if (value === "x³") {
-                currentInput = Math.pow(parseFloat(currentInput), 3).toString();
+                currentInput = limitDecimals(Math.pow(parseFloat(currentInput || "0"), 3));
             } else if (value === "²√x") {
-                currentInput = Math.sqrt(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.sqrt(parseFloat(currentInput || "0")));
             } else if (value === "³√x") {
-                currentInput = Math.cbrt(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.cbrt(parseFloat(currentInput || "0")));
             } else if (value === "1/x") {
-                currentInput = (1 / parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(1 / parseFloat(currentInput || "1"));
             } else if (value === "ln") {
-                currentInput = Math.log(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.log(parseFloat(currentInput || "1")));
             } else if (value === "log₁₀") {
-                currentInput = Math.log10(parseFloat(currentInput)).toString();
-            } else if (value === "sin") {
-                currentInput = Math.sin(parseFloat(currentInput) * Math.PI / 180).toString();
+                currentInput = limitDecimals(Math.log10(parseFloat(currentInput || "1")));
+            } 
+            
+            // ✅ Fix for sin, cos, tan functions
+            else if (value === "sin") {
+                currentInput = limitDecimals(Math.sin(parseFloat(currentInput || "0") * Math.PI / 180));
             } else if (value === "cos") {
-                currentInput = Math.cos(parseFloat(currentInput) * Math.PI / 180).toString();
+                currentInput = limitDecimals(Math.cos(parseFloat(currentInput || "0") * Math.PI / 180));
             } else if (value === "tan") {
-                currentInput = Math.tan(parseFloat(currentInput) * Math.PI / 180).toString();
-            } else if (value === "sinh") {
-                currentInput = Math.sinh(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.tan(parseFloat(currentInput || "0") * Math.PI / 180));
+            } 
+            
+            else if (value === "sinh") {
+                currentInput = limitDecimals(Math.sinh(parseFloat(currentInput || "0")));
             } else if (value === "cosh") {
-                currentInput = Math.cosh(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.cosh(parseFloat(currentInput || "0")));
             } else if (value === "tanh") {
-                currentInput = Math.tanh(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.tanh(parseFloat(currentInput || "0")));
             } else if (value === "xʸ") {
                 currentInput += "**";
             } else if (value === "eˣ") {
-                currentInput = Math.exp(parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.exp(parseFloat(currentInput || "0")));
             } else if (value === "10ˣ") {
-                currentInput = Math.pow(10, parseFloat(currentInput)).toString();
+                currentInput = limitDecimals(Math.pow(10, parseFloat(currentInput || "0")));
             } else if (value === "Rand") {
-                currentInput = Math.random().toString();
+                currentInput = limitDecimals(Math.random());
             } else if (value === "x!") {
-                let num = parseInt(currentInput);
+                let num = parseInt(currentInput || "1");
                 let fact = 1;
                 for (let i = 2; i <= num; i++) {
                     fact *= i;
                 }
-                currentInput = fact.toString();
+                currentInput = limitDecimals(fact);
             } else if (value === "mc") {
                 memory = 0;
             } else if (value === "m+") {
-                memory += parseFloat(currentInput);
+                memory += parseFloat(currentInput || "0");
             } else if (value === "m-") {
-                memory -= parseFloat(currentInput);
+                memory -= parseFloat(currentInput || "0");
             } else if (value === "mr") {
-                currentInput = memory.toString();
+                currentInput = limitDecimals(memory);
             }
 
             updateDisplay();
